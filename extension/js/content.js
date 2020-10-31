@@ -63,7 +63,7 @@ chrome.storage.sync.get(['settings'], function(data) {
   insertionQ('.s-starred-conversations-list').every(function(element){
 
        // Agregar menu
-      let twContainer = '<div id="TwContainer" style="height:200px;width:200px">asdf</div>';
+      let twContainer = '<div id="TwContainer" style="height:200px;display:flex;justify-content:space-between;margin:20px 15px"><div>Teamwork Chat Pro</div><div><button><img src="img/icons8-settings-16.png"></button></div></div>';
       element.insertAdjacentHTML('beforebegin', twContainer);
       
   });

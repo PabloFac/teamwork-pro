@@ -4,56 +4,61 @@
     border-color: #444 !important;
 }
 
+.DarkMode #TwContainer,
+.DarkMode #TwContainer *,
 .DarkMode .s-messages__separator-content,
 .DarkMode .s-messages__separator-content--last-read,
 .DarkMode .s-conversation-title,
-.DarkMode .s-conversation-title *,
+.DarkMode .s-conversation-title *:not(.s-avatar__status),
 .DarkMode .s-conversation__message-form-wrapper,
-.DarkMode .s-conversation__message-form-wrapper *,
+.DarkMode .s-conversation__message-form-wrapper *:not(.s-avatar__status),
 .DarkMode .m-file-viewer__file,
-.DarkMode .m-file-viewer__file *,
+.DarkMode .m-file-viewer__file *:not(.s-avatar__status),
 .DarkMode .s-messages,
-.DarkMode .s-messages *:not(pre):not(code) {
+.DarkMode .s-messages *:not(pre):not(code):not(.s-avatar__status) {
     background-color: #282828 !important;
 }
 
-.DarkMode .s-conversation-blank-slate__message,
+.DarkMode .s-conversation-blank-slate__message:not(.s-avatar__status),
 .DarkMode .w-conversation-link,
-.DarkMode .w-conversation-link *,
+.DarkMode .w-conversation-link *:not(.s-avatar__status),
 .DarkMode .s-conversations-list,
-.DarkMode .s-conversations-list *,
+.DarkMode .s-conversations-list *:not(.s-avatar__status),
 .DarkMode .s-conversations-filter,
-.DarkMode .s-conversations-filter *,
+.DarkMode .s-conversations-filter *:not(.s-avatar__status),
 .DarkMode .s-conversations-list__header,
-.DarkMode .s-conversations-list__header *,
+.DarkMode .s-conversations-list__header *:not(.s-avatar__status),
 .DarkMode .w-text-input,
-.DarkMode .w-text-input *,
+.DarkMode .w-text-input *:not(.s-avatar__status),
 .DarkMode .m-file-viewer__header,
-.DarkMode .m-file-viewer__header *,
+.DarkMode .m-file-viewer__header *:not(.s-avatar__status),
 .DarkMode .p-chat__left-sidebar,
-.DarkMode .p-chat__left-sidebar * {
+.DarkMode .p-chat__left-sidebar *:not(.s-avatar__status),
+.DarkMode  {
     background-color: #222 !important;
 }
 
+/*
 .DarkMode .s-avatar__status {
     display: none;
 }
+*/
 
 .meetButton,
 .DarkMode .s-conversations-list__unread-indicator,
 .DarkMode .s-conversation-preview--unread, 
-.DarkMode .s-conversation-preview--unread *,
+.DarkMode .s-conversation-preview--unread *:not(.s-avatar__status),
 .DarkMode .s-unified-header { 
     background-color: #205e9f !important;
 }
 .DarkMode .s-conversation-preview.router-link-active, 
-.DarkMode .s-conversation-preview.router-link-active * {
+.DarkMode .s-conversation-preview.router-link-active *:not(.s-avatar__status) {
     background-color: #555 !important;
 }
 
 .meetButton,
 .DarkMode .s-card,
-.DarkMode .s-card * {
+.DarkMode .s-card *:not(.s-avatar__status) {
     background-color: #111 !important;
     color: #ddd;
 }
@@ -62,14 +67,17 @@
     background-color: #666 !important;
 }
 
+.DarkMode .s-conversations-list--blank-slate-shown, 
+.DarkMode .s-conversation-timeline-blank-slate,
 .DarkMode .s-conversations-list {
-    border: none;
+    border-width: 0px !important;
 }
 
+.DarkMode,
 .DarkMode .s-message-reactions,
 .DarkMode .s-messages__separator-line,
 .DarkMode .s-menu__item,
-.DarkMode .s-menu__item *,
+.DarkMode .s-menu__item *:not(.s-avatar__status),
 .DarkMode .s-third-party-card,
 .DarkMode .s-message-form {
     border-color: #444 !important;
@@ -77,31 +85,31 @@
 
 .DarkMode .s-conversation-preview__title-text,
 .DarkMode .s-conversation-preview__top-row,
-.DarkMode .s-conversation-preview__top-row * {
+.DarkMode .s-conversation-preview__top-row *:not(.s-avatar__status) {
     color: #666 !important;
 }
 
-.DarkMode .ql-editor *,
+.DarkMode .ql-editor *:not(.s-avatar__status),
 .DarkMode .s-message__author,
-.DarkMode .s-message__author *,
+.DarkMode .s-message__author *:not(.s-avatar__status),
 .DarkMode .m-file-viewer__header,
-.DarkMode .m-file-viewer__header *,
+.DarkMode .m-file-viewer__header *:not(.s-avatar__status),
 .DarkMode .s-conversation-preview__bottom-row,
-.DarkMode .s-conversation-preview__bottom-row *,
+.DarkMode .s-conversation-preview__bottom-row *:not(.s-avatar__status),
 .DarkMode .s-conversation-preview__author-label,
-.DarkMode .s-conversation-preview__author-label * {
+.DarkMode .s-conversation-preview__author-label *:not(.s-avatar__status) {
     color: #aaa !important;
 }
 
 .DarkMode .s-conversation-preview--unread, 
 .DarkMode .p-chat__left-sidebar,
-.DarkMode .p-chat__left-sidebar *,
+.DarkMode .p-chat__left-sidebar *:not(.s-avatar__status),
 .DarkMode .s-conversation-title__title-text,
-.DarkMode .s-conversation-title__title-text *,
+.DarkMode .s-conversation-title__title-text *:not(.s-avatar__status),
 .DarkMode .s-messages__separator-content,
-.DarkMode .s-messages__separator-content *,
+.DarkMode .s-messages__separator-content *:not(.s-avatar__status),
 .DarkMode .s-message__contents,
-.DarkMode .s-message__contents * {
+.DarkMode .s-message__contents *:not(.s-avatar__status) {
     color: #ddd !important;
 }
 
@@ -114,16 +122,18 @@
 */
 
 .DarkMode .s-third-party-card__header a:contains('Meet'),
-.DarkMode .s-third-party-card__header a:contains('Meet') * {
+.DarkMode .s-third-party-card__header a:contains('Meet') *:not(.s-avatar__status) {
     background-color: #205e9f !important;
 }
 
 .DarkMode .s-message__contents pre 
-.DarkMode .s-message__contents pre * 
+.DarkMode .s-message__contents pre *:not(.s-avatar__status) 
 .DarkMode .s-message__contents code 
-.DarkMode .s-message__content code * {
+.DarkMode .s-message__content code *:not(.s-avatar__status) {
     background-color: #555 !important;
 }
+
+
 
 .meetButton {
     outline: none;
@@ -132,4 +142,13 @@
     padding: 4px 6px;
     cursor: hand;
     background: #205e9f !important;
+}
+#TwContainer {
+    display:flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+#TwContainer button {
+    border: none;
+    outline: none;
 }

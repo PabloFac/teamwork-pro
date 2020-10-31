@@ -63,7 +63,7 @@ chrome.storage.sync.get(['settings'], function(data) {
   insertionQ('.s-starred-conversations-list').every(function(element){
 
        // Agregar menu
-      let twContainer = '<div id="TwContainer" style="height:200px;display:flex;justify-content:space-between;margin:20px 15px"><div>Teamwork Chat Pro</div><div><button><img src="img/icons8-settings-16.png"></button></div></div>';
+      let twContainer = '<div id="TwContainer" style="display:flex;justify-content:space-between;margin:20px 15px"><div>Teamwork Chat Pro</div><div><button style="border:none;outline:0"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAABEUlEQVQ4jaWTMUtDMRSFv1iVtkNdBUcn1yIPV2cXoUXBWfsj+lMcVRycdHB2VRFXda24V6Ed6vC53EKkr0+wgZDce05OuOcmsOBI8wC1AHYjvEspPZbxlivEj4H12G8CpQL5jXW1ozbUtjpQi5iDyDWCUy8T6Kvv6lB9DWItZidyw+D0f3mgbgAvQBv4BCaBHwICVxGvAmvAM7CVUvqYCjSBS6AJ7AMrwBNwHwd3gG3gG7gGxsBRSmmcl1BTR2pL7alnGXahngQ2UmtTbKnC17ktniFVlPAQnCJKmAA3eQl/mXgQ61wTcw/yNr6p3ayN3cjNtDEX+NdDqvoLp0Arwq+UUq+MV/UXzoG92N9W8BYbP5dT+jU0ld5tAAAAAElFTkSuQmCC"></button></div></div>';
       element.insertAdjacentHTML('beforebegin', twContainer);
       
   });

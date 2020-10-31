@@ -17,6 +17,7 @@
     background-color: #282828 !important;
 }
 
+.DarkMode .s-conversation-blank-slate__message,
 .DarkMode .w-conversation-link,
 .DarkMode .w-conversation-link *,
 .DarkMode .s-conversations-list,

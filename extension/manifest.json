@@ -21,14 +21,15 @@
         "https://*.teamwork.com/chat/*"
       ],
       "js": [
-          "js/jquery.min.js", 
-          "js/popper.min.js",
-          "js/bootstrap.min.js",
-          "js/mdb.min.js",
-          "js/insQ.min.js",
+          "js/libraries/jquery.min.js", 
+          "js/libraries/popper.min.js",
+          "js/libraries/bootstrap.min.js",
+          "js/libraries/mdb.min.js",
+          "js/libraries/insQ.min.js",
           "js/random-name-generator.js", 
           "js/settings.js", 
           "js/popup.js", 
+          "js/background.js", 
           "js/content.js"
         ],
       "css": [

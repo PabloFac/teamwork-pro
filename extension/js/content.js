@@ -61,11 +61,11 @@ chrome.storage.sync.get(['settings'], function(data) {
   let settings = data.settings;
 
   insertionQ('.s-starred-conversations-list').every(function(element){
-       // Agregar menu
-      let twContainer = '<div id="twContainer"></div>';
-      element.insertAdjacentHTML('beforebegin', twContainer);
-      $('#twContainer').load('../../html/menu.html');
 
+       // Agregar menu
+      let twContainer = '<div id="TwContainer" style="height:200px;width:200px">asdf</div>';
+      element.insertAdjacentHTML('beforebegin', twContainer);
+      
   });
 
   if (settings.meetBtnEnabled){

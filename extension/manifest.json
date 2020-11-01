@@ -42,7 +42,9 @@
     "default_icon": "img/tw-chat.png",
     "default_popup": "options-v2.html"
   },
+  "content_security_policy": "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; object-src 'self'",
   "web_accessible_resources": [
-    "options.html"
+    "https://www.googletagmanager.com",
+    "https://www.google-analytics.com"
   ]
 }

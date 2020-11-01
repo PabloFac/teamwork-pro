@@ -1,47 +1,88 @@
+console.log('Start of popup.js');
 
-function guardarConfiguracionActual(){
+let defaultConfig = {
+  meetButton: 3,
+  linkName: 0
+};
 
-  let extensionSettings = {
-    darkMode: $('#darkMode').prop('checked'),
-    autoSendMeet: $('#autoSend').prop('checked'),
-    autoOpenMeet: $('#autoOpen').prop('checked'),
-    showTwMeet: $('#showTwMeet').prop('checked'),
-    meetBtnEnabled: $('#meetBtnEnabled').prop('checked'),
-    randomMeetName: $('#meetNameRandom').prop('checked'),
-    textPrefix: $('#meetMessagePrefix').val(),
-    textSufix: $('#meetMessageSufix').val()
-  }
-  console.log('SAVE CONFIG', extensionSettings);
-  saveSettings(extensionSettings);
-  mostrarConfiguracionActual();
+function resetColorSelection(){
+
 }
+
+function saveSettings(settings){
+  chrome.storage.sync.set({'settings': settings}, function() {
+      console.log('Settings saved');
+    });
+}
+
 function mostrarConfiguracionActual(){ 
 
   chrome.storage.sync.get(['settings'], function(data) {
     
     let extensionSettings = data.settings;
-    console.log('SHOW CONFIG', extensionSettings);
-    if (extensionSettings != undefined){
-      $('#darkMode').prop('checked', extensionSettings.darkMode);
-      $('#autoSend').prop('checked', extensionSettings.autoSendMeet);
-      $('#autoOpen').prop('checked', extensionSettings.autoOpenMeet);
-      $('#showTwMeet').prop('checked', extensionSettings.showTwMeet);
-      $('#meetBtnEnabled').prop('checked', extensionSettings.meetBtnEnabled);
-      $('#meetNameRandom').prop('checked', extensionSettings.randomMeetName);
-      $('#meetNameChat').prop('checked', !extensionSettings.randomMeetName);
-      $('#meetMessagePrefix').val(extensionSettings.textPrefix);
-      $('#meetMessageSufix').val(extensionSettings.textSufix);
-    }
+    console.log("TW-CHAT-PRO", extensionSettings);
 
+    if (extensionSettings == undefined){
+      extensionSettings == defaultConfig
+    };
+
+    // Boton de Meet
+    $('#meetDesactivado').prop('checked', extensionSettings.meetButton == 0);
+    $('#meetLink').prop('checked', extensionSettings.meetButton == 1);
+    $('#meetLinkSend').prop('checked', extensionSettings.meetButton == 2);
+    $('#meetSendOpen').prop('checked', extensionSettings.meetButton == 3);
+    // Nombre de Meet
+    $('#linkAleatorio').prop('checked', extensionSettings.linkName == 0);
+    $('#linkChat').prop('checked', extensionSettings.linkName == 1);
+    $('#linkPreguntar').prop('checked', extensionSettings.linkName == 2);
 
    });
 
 }
+
+function guardarConfiguracionActual(){
+
+  let extensionSettings = defaultConfig;
+ 
+  // Boton de Meet
+  if ($('#meetDesactivado').prop('checked')){
+    extensionSettings.meetButton = 0;
+  } else if ($('#meetLink').prop('checked')){
+    extensionSettings.meetButton = 1;
+  } else if ($('#meetLinkSend').prop('checked')){
+    extensionSettings.meetButton = 2;
+  } else if ($('#meetSendOpen').prop('checked')){
+    extensionSettings.meetButton = 3;
+  }
+  // Nombre de Meet
+  if ($('#linkAleatorio').prop('checked')){
+    extensionSettings.linkName = 0;
+  } else if ($('#linkChat').prop('checked')){
+    extensionSettings.linkName = 1;
+  } else if ($('#linkPreguntar').prop('checked')){
+    extensionSettings.linkName = 2;
+  }
+  
+  saveSettings(extensionSettings);
+}
+
+
 mostrarConfiguracionActual();
 
-$('#saveBtn').on('click', function(){
-  guardarConfiguracionActual();
-});
 $('.inputControl').on('change', function(){
   guardarConfiguracionActual();
 });
+
+
+/*
+  Google Analitycs
+*/
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-46PK89KKLN');
+gtag('set', 'checkProtocolTask', function(){}); // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
+gtag('require', 'displayfeatures');
+gtag('send', 'pageview', window.location.href);
+  
+console.log('End of popup.js');

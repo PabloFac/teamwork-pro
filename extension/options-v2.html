@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Options | Teamwork Chat</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-46PK89KKLN"></script>
     <!-- Recursos estaticos -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/mdb.min.css" />
     <link rel="stylesheet" href="css/popup.css" />
+
+
+
 </head>
 <body>
 
@@ -97,35 +102,35 @@
                         <div id="meetOptions" class="collapse">
                             <div class="mb-4 ml-3">
                                 <div class="custom-control custom-radio mb-2">
-                                    <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
-                                    <label class="custom-control-label" for="defaultUnchecked">Desactivado</label>
+                                    <input type="radio" class="custom-control-input inputControl" id="meetDesactivado" name="meetButton">
+                                    <label class="custom-control-label" for="meetDesactivado">Desactivado</label>
                                 </div>
                                 <div class="custom-control custom-radio mb-2">
-                                    <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
-                                    <label class="custom-control-label" for="defaultUnchecked">Sólo generar link</label>
+                                    <input type="radio" class="custom-control-input inputControl" id="meetLink" name="meetButton">
+                                    <label class="custom-control-label" for="meetLink">Sólo generar link</label>
                                 </div>       
                                 <div class="custom-control custom-radio mb-2">
-                                    <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
-                                    <label class="custom-control-label" for="defaultUnchecked">Generar y enviar link</label>
+                                    <input type="radio" class="custom-control-input inputControl" id="meetLinkSend" name="meetButton">
+                                    <label class="custom-control-label" for="meetLinkSend">Generar y enviar link</label>
                                 </div>                    
                                 <div class="custom-control custom-radio mb-2">
-                                    <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
-                                    <label class="custom-control-label" for="defaultChecked">Enviar y abrir link</label>
+                                    <input type="radio" class="custom-control-input inputControl" id="meetSendOpen" name="meetButton">
+                                    <label class="custom-control-label" for="meetSendOpen">Enviar y abrir link</label>
                                 </div>
                             </div>
-                            <h5 class="ml-3">Link de Meet</h5>
+                            <h5 class="ml-3">Nombre de Meet</h5>
                             <div class="mb-4 ml-3">
                                 <div class="custom-control custom-radio mb-2">
-                                    <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
-                                    <label class="custom-control-label" for="defaultUnchecked">Aleatorio</label>
+                                    <input type="radio" class="custom-control-input inputControl" id="linkAleatorio" name="linkName">
+                                    <label class="custom-control-label" for="linkAleatorio">Aleatorio</label>
                                 </div>
                                 <div class="custom-control custom-radio mb-2">
-                                    <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
-                                    <label class="custom-control-label" for="defaultUnchecked">Usar nombre del chat, conversacion, o grupo.</label>
+                                    <input type="radio" class="custom-control-input inputControl" id="linkChat" name="linkName">
+                                    <label class="custom-control-label" for="linkChat">Usar nombre del chat, conversacion, o grupo.</label>
                                 </div>       
                                 <div class="custom-control custom-radio mb-2">
-                                    <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
-                                    <label class="custom-control-label" for="defaultChecked">Preguntar cada vez</label>
+                                    <input type="radio" class="custom-control-input inputControl" id="linkPreguntar" name="linkName" checked>
+                                    <label class="custom-control-label" for="linkPreguntar">Preguntar cada vez</label>
                                 </div>
                             </div>
                         </div>
@@ -137,17 +142,17 @@
                             </button>   
                         </h3>
                         <div id="enviarComentarios" class="collapse">
-                            <p class="mb-4 ml-3">Valoramos tus sugerencias, envianos tus comenntarios por este <a href="https://docs.google.com/forms/d/e/1FAIpQLSeS-c5-FUF2oWB69MR5dLdYczVE97hd4eki9lsKt7j2wDR2UQ/viewform" title="Confiadisimo link de una extension">Formulario de Google</a>.</p>
+                            <p class="mb-4 ml-3">Valoramos tus sugerencias, envianos tus comentarios por este <a href="https://docs.google.com/forms/d/e/1FAIpQLSeS-c5-FUF2oWB69MR5dLdYczVE97hd4eki9lsKt7j2wDR2UQ/viewform" title="Confiadisimo link de una extension">Formulario de Google</a>.</p>
                         </div>
 
-                        <h3 id="comentarios" class="mb-3 d-flex justify-content-between">
+                        <h3 id="acercade" class="mb-3 d-flex justify-content-between">
                             <span>Acerca de Teamwork Chat Pro</span>
-                            <button class="btn btn-transparent btn-sm" type="button" data-toggle="collapse" data-target="#acercade">
+                            <button class="btn btn-transparent btn-sm" type="button" data-toggle="collapse" data-target="#creditos">
                                 <img src="https://img.icons8.com/win10/ffffff/menu-vertical" width="16" height="16"/>
                             </button>   
                         </h3>
-                        <div id="acercade" class="collapse">
-                            <p class="mb-4 ml-3">Extensión de Google Chrome para Teamwork Chat. Desarrollado por Pablo Facciano.<br>Contacto: pablo.facciano@xappia.com</p>
+                        <div id="creditos" class="collapse">
+                            <p class="mb-4 ml-3">Extensión de Google Chrome para Teamwork Chat. Dev: Pablo Facciano.<br>Contacto: pablo.facciano@xappia.com</p>
                         </div>
                           
                     </div>

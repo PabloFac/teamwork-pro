@@ -82,7 +82,6 @@ function mostrarConfiguracionActual(){
     else { $('#customColor').addClass(classSelector); }
     // Tema
     if (settings.theme == 'dark'){ $('#darkTheme').addClass(classSelector); }
-    else if (settings.theme == 'black'){ $('#blackTheme').addClass(classSelector); }
     else { $('#classicTheme').addClass(classSelector); }
 
     colorSelected = settings.color;

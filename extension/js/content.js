@@ -37,7 +37,7 @@ function AplicarTema(settings){
   }
 
   // Color
-
+  $("body").get(0).style.setProperty("--theme-color", settings.color);
 
   // Tema
 

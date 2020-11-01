@@ -2,7 +2,9 @@ console.log('Start of popup.js');
 
 let defaultConfig = {
   meetButton: 3,
-  linkName: 0
+  linkName: 0,
+  color: '#fff',
+  theme: 'dark'
 };
 
 function resetColorSelection(){

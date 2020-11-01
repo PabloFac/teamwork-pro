@@ -9,9 +9,9 @@
     "activeTab",
     "storage"
   ],
-  "options_page": "options.html",
+  "options_page": "options-v2.html",
   "options_ui": {
-    "page": "options.html",
+    "page": "options-v2.html",
     "open_in_tab": true
   },
   "content_scripts": [
@@ -27,7 +27,6 @@
           "js/libraries/mdb.min.js",
           "js/libraries/insQ.min.js",
           "js/random-name-generator.js", 
-          "js/settings.js", 
           "js/popup.js", 
           "js/background.js", 
           "js/content.js"

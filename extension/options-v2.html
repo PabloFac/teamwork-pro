@@ -13,75 +13,149 @@
 </head>
 <body>
 
-    <div class="row no-gutters" style="height: 100vh;">
-        <div class="col-12 navbar navbar-dark elegant-color d-flex justify-content-start align-items-center p-3 w-100 sticky-top">
+    <div class="row no-gutters">
+        <div class="col-12 navbar navbar-dark elegant-color d-flex justify-content-between align-items-center p-3 w-100 sticky-top">
             <img src="favicon.png" width="32" height="32"/>
             <b class="ml-3">Teamwork Chat Pro</b>
+            <button class="btn btn-outline-light btn-sm" type="button" data-toggle="collapse" data-target="#MainNav">
+              Menu
+            </button>
         </div>
-        <div class="col-12 row no-gutters h-100" style="overflow-y: auto;">
-            <nav class="col-12 col-sm-4 col-lg-2 p-3 blue-gradient">
-                <ul class="nav md-pills flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link text-light" href="#tema">Tema</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-light" href="#meet">Boton Meet</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-light" href="#comentarios">Enviar comentarios</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-light" href="#acercade">Acerca de TW Pro</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="col-12 col-sm-8 col-lg-10 p-4">
-                <h4 id="tema">Tema</h4>
-                <div class="d-flex justify-content-between flex-wrap">
-                    <button class="btn px-3 d-flex text-left align-items-center">
-                        <span style="background-color: #aaa;" class="burbuja mr-3"></span>
-                        <span>Classic</span>
-                    </button>
-                    <button class="btn px-3 d-flex text-left align-items-center">
-                        <span style="background-color: #0066CC;" class="burbuja mr-3"></span>
-                        <span>Blue Moon</span>
-                    </button>
-                    <button class="btn px-3 d-flex text-left align-items-center">
-                        <span style="background-color: #FF0000;" class="burbuja mr-3"></span>
-                        <span>Red Rose</span>
-                    </button>
-                    <button class="btn px-3 d-flex text-left align-items-center">
-                        <span style="background-color: #444;" class="burbuja mr-3"></span>
-                        <span>Dark Night</span>
-                    </button>
-                    <button class="btn px-3 d-flex text-left align-items-center">
-                        <span style="background-color: transparent;" class="burbuja mr-3"></span>
-                        <span>Custom</span>
-                    </button>
+        <div class="col-12  blue-gradient" style="overflow-y: auto;">
+            <div class="container">
+                <div class="row no-gutters" style="background-color: #00000066;">
+                    <nav class="col-12 col-sm-4 col-lg-2 p-3 collapse" id="MainNav">
+                        <ul class="nav md-pills flex-column">
+                            <li class="nav-item">
+                              <a class="nav-link text-light" href="#tema">Tema</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-light" href="#meet">Boton Meet</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-light" href="#comentarios">Enviar comentarios</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-light" href="#acercade">Acerca de TW Pro</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="col-12 col-sm p-4">
+
+                        <h3 id="tema" class="mb-3 d-flex justify-content-between">
+                            <span>Color</span>
+                            <button class="btn btn-transparent btn-sm" type="button" data-toggle="collapse" data-target="#colorOptions">
+                                <img src="https://img.icons8.com/win10/ffffff/menu-vertical" width="16" height="16"/>
+                            </button>   
+                        </h3>
+                        <div id="colorOptions" class="collapse">                    
+                            <div class="d-flex flex-wrap mb-3 ml-3">
+                                <button class="btn px-3 d-flex text-left align-items-center">
+                                    <span style="background-color: rgb(29, 28, 57);" class="burbuja mr-3"></span>
+                                    <span>Classic</span>
+                                </button>
+                                <button class="btn px-3 d-flex text-left align-items-center border">
+                                    <span style="background-color: #0066CC;" class="burbuja mr-3"></span>
+                                    <span>Blue Moon</span>
+                                </button>
+                                <button class="btn px-3 d-flex text-left align-items-center">
+                                    <span style="background-color: #FF0000;" class="burbuja mr-3"></span>
+                                    <span>Red Rose</span>
+                                </button>
+                                <button class="btn px-3 d-flex text-left align-items-center">
+                                    <span style="background-color: #9933FF;" class="burbuja mr-3"></span>
+                                    <span>Purple Essence</span>
+                                </button>
+                                <button class="btn px-3 d-flex text-left align-items-center">
+                                    <span style="background-color: transparent;" class="burbuja mr-3"></span>
+                                    <span>Elegir</span>
+                                </button>
+                            </div>
+                            <h5 class="ml-3">Tema</h5>
+                            <div class="d-flex flex-wrap mb-5 ml-3">
+                                <button class="btn px-3 d-flex text-left align-items-center">
+                                    <span style="background-color: #ddd;" class="burbuja mr-3"></span>
+                                    <span>Light</span>
+                                </button>
+                                <button class="btn px-3 d-flex text-left align-items-center border">
+                                    <span style="background-color: #333;" class="burbuja mr-3"></span>
+                                    <span>Dark</span>
+                                </button>
+                                <button class="btn px-3 d-flex text-left align-items-center">
+                                    <span style="background-color: #000;" class="burbuja mr-3"></span>
+                                    <span>Black</span>
+                                </button>
+                            </div>
+                        </div> 
+
+                        <h3 id="meet" class="mb-3 d-flex justify-content-between">
+                            <span>Boton Meet</span>
+                            <button class="btn btn-transparent btn-sm" type="button" data-toggle="collapse" data-target="#meetOptions">
+                                <img src="https://img.icons8.com/win10/ffffff/menu-vertical" width="16" height="16"/>
+                            </button>   
+                        </h3>
+                        <div id="meetOptions" class="collapse">
+                            <div class="mb-4 ml-3">
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
+                                    <label class="custom-control-label" for="defaultUnchecked">Desactivado</label>
+                                </div>
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
+                                    <label class="custom-control-label" for="defaultUnchecked">Sólo generar link</label>
+                                </div>       
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
+                                    <label class="custom-control-label" for="defaultUnchecked">Generar y enviar link</label>
+                                </div>                    
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
+                                    <label class="custom-control-label" for="defaultChecked">Enviar y abrir link</label>
+                                </div>
+                            </div>
+                            <h5 class="ml-3">Link de Meet</h5>
+                            <div class="mb-4 ml-3">
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
+                                    <label class="custom-control-label" for="defaultUnchecked">Aleatorio</label>
+                                </div>
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
+                                    <label class="custom-control-label" for="defaultUnchecked">Usar nombre del chat, conversacion, o grupo.</label>
+                                </div>       
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
+                                    <label class="custom-control-label" for="defaultChecked">Preguntar cada vez</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 id="comentarios" class="mb-3 d-flex justify-content-between">
+                            <span>Enviar comentarios</span>
+                            <button class="btn btn-transparent btn-sm" type="button" data-toggle="collapse" data-target="#enviarComentarios">
+                                <img src="https://img.icons8.com/win10/ffffff/menu-vertical" width="16" height="16"/>
+                            </button>   
+                        </h3>
+                        <div id="enviarComentarios" class="collapse">
+                            <p class="mb-4 ml-3">Valoramos tus sugerencias, envianos tus comenntarios por este <a href="https://docs.google.com/forms/d/e/1FAIpQLSeS-c5-FUF2oWB69MR5dLdYczVE97hd4eki9lsKt7j2wDR2UQ/viewform" title="Confiadisimo link de una extension">Formulario de Google</a>.</p>
+                        </div>
+
+                        <h3 id="comentarios" class="mb-3 d-flex justify-content-between">
+                            <span>Acerca de Teamwork Chat Pro</span>
+                            <button class="btn btn-transparent btn-sm" type="button" data-toggle="collapse" data-target="#acercade">
+                                <img src="https://img.icons8.com/win10/ffffff/menu-vertical" width="16" height="16"/>
+                            </button>   
+                        </h3>
+                        <div id="acercade" class="collapse">
+                            <p class="mb-4 ml-3">Extensión de Google Chrome para Teamwork Chat. Desarrollado por Pablo Facciano.<br>Contacto: pablo.facciano@xappia.com</p>
+                        </div>
+                          
+                    </div>
                 </div>
-                <h4 id="meet">@mdo</h4>
-                <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui.
-                Tumblr
-                farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo
-                booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't
-                heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus,
-                cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
-                <h4 id="comentarios">one</h4>
-                <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui.
-                Tumblr
-                farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo
-                booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't
-                heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus,
-                cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
-                <h4 id="acercade">two</h4>
-                <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui.
-                Tumblr
-                farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo
-                booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't
-                heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus,
-                cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
-                   
             </div>
+        </div>
+        <div class="col-12 p-3">
+            Ultima actualización: 01/11/2020
         </div>
     </div>
     

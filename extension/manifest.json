@@ -40,7 +40,7 @@
   "browser_action": {
     "default_title ": "Teamwork Chat Pro",
     "default_icon": "img/tw-chat.png",
-    "default_popup": ""
+    "default_popup": "options-v2.html"
   },
   "web_accessible_resources": [
     "options.html"

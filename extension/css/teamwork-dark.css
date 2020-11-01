@@ -146,9 +146,13 @@
 #TwContainer {
     display:flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 20px;
 }
-#TwContainer button {
+#TwContainer a,
+#TwContainer a * {
     border: none;
     outline: none;
-}
+    padding: 2px 2px;
+    cursor: pointer;
+} 

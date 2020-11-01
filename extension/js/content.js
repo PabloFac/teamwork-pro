@@ -28,9 +28,9 @@ function loadSettings(settings) {
 */
 
 function AplicarTema(settings){
-  
+
   // Stylesheet
-  if (settings.theme == 'none'){
+  if (settings.theme == 'classic'){
     document.body.classList.remove("tw-custom");
   } else {
     document.body.classList.add("tw-custom");

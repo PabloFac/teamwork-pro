@@ -83,6 +83,6 @@ gtag('js', new Date());
 gtag('config', 'G-46PK89KKLN');
 gtag('set', 'checkProtocolTask', function(){}); // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
 gtag('require', 'displayfeatures');
-gtag('send', 'pageview', window.location.href);
+gtag('send', 'pageview', '/options.html');
   
 console.log('End of popup.js');

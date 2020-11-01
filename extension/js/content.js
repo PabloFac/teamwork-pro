@@ -1,58 +1,30 @@
-// 
-if (!String.prototype.format) {
-  String.prototype.format = function() {
-    var args = arguments;
-    return this.replace(/{(\d+)}/g, function(match, number) { 
-      return typeof args[number] != 'undefined'
-        ? args[number]
-        : match
-      ;
-    });
-  };
-}
-
-function simulateKey (keyCode, type, modifiers) {
-	var evtName = (typeof(type) === "string") ? "key" + type : "keydown";	
-	var modifier = (typeof(modifiers) === "object") ? modifier : {};
-
-	var event = document.createEvent("HTMLEvents");
-	event.initEvent(evtName, true, false);
-	event.keyCode = keyCode;
-	
-	for (var i in modifiers) {
-		event[i] = modifiers[i];
-	}
-
-	document.dispatchEvent(event);
-}
-
 // Cuando se actualiza 'settings'
 chrome.storage.onChanged.addListener(function(changes, namespace) {
   for (var key in changes) {
     var storageChange = changes[key];
     if (key == 'settings'){
-      doSomething(storageChange.newValue);
+      loadSettings(storageChange.newValue);
     }
   }
 });
 // Cuando se sincroniza 'settings'
 chrome.storage.sync.get(['settings'], function(data) {
-  doSomething(data.settings);
+  loadSettings(data.settings);
 });
 
 
-function doSomething(settings) {
+function loadSettings(settings) {
+
   AplicarTema(settings);
   AgregarMenu();
   AgregarBotonMeet(settings);
-  AgregarLinkDeMeet(settings);
+  // AgregarLinkDeMeet(settings); // DEPRECATED
   
 }
 
 
 /*
-    Funcionalidad de la extension
-
+  Funcionalidad de la extension
 */
 
 function AplicarTema(settings){
@@ -153,4 +125,37 @@ function AgregarLinkDeMeet(settings){
   
     
   });
+}
+
+/*
+  Otros
+*/
+if (!String.prototype.format) {
+  String.prototype.format = function() {
+    var args = arguments;
+    return this.replace(/{(\d+)}/g, function(match, number) { 
+      return typeof args[number] != 'undefined'
+        ? args[number]
+        : match
+      ;
+    });
+  };
+}
+
+/*
+  No utilizado
+*/
+function simulateKey (keyCode, type, modifiers) {
+	var evtName = (typeof(type) === "string") ? "key" + type : "keydown";	
+	var modifier = (typeof(modifiers) === "object") ? modifier : {};
+
+	var event = document.createEvent("HTMLEvents");
+	event.initEvent(evtName, true, false);
+	event.keyCode = keyCode;
+	
+	for (var i in modifiers) {
+		event[i] = modifiers[i];
+	}
+
+	document.dispatchEvent(event);
 }

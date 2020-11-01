@@ -28,12 +28,20 @@ function loadSettings(settings) {
 */
 
 function AplicarTema(settings){
+  document.body.classList.add("tw-custom");
 
-  if (settings.theme == 'dark'){
-    document.body.classList.add("DarkMode");
+  // Stylesheet
+  if (settings.theme == 'none'){
+    document.body.classList.remove("tw-custom");
   } else {
-    document.body.classList.remove("DarkMode");
+    document.body.classList.add("tw-custom");
   }
+
+  // Color
+  
+
+  // Tema
+
 
 }
 

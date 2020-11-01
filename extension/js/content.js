@@ -28,8 +28,7 @@ function loadSettings(settings) {
 */
 
 function AplicarTema(settings){
-  document.body.classList.add("tw-custom");
-
+  
   // Stylesheet
   if (settings.theme == 'none'){
     document.body.classList.remove("tw-custom");
@@ -38,7 +37,7 @@ function AplicarTema(settings){
   }
 
   // Color
-  
+
 
   // Tema
 

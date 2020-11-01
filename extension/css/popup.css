@@ -1,7 +1,6 @@
 html, body {
     background-color: #333;
     color: #ccc;
-    width: 500px;
 }
 .form-control {
     color: #ccc !important;
@@ -9,3 +8,4 @@ html, body {
 #allContent {
     height: 100%;
 }
+

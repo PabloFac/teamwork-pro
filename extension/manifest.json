@@ -1,0 +1,49 @@
+{
+  "manifest_version": 2,
+  "name": "Teamwork Chat Pro",
+  "version": "0.0.0.2",
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "options_page": "options-v2.html",
+  "options_ui": {
+    "page": "options-v2.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*.teamwork.com/chat/*",
+        "https://*.teamwork.com/chat/*"
+      ],
+      "js": [
+          "js/libraries/jquery.min.js", 
+          "js/libraries/popper.min.js",
+          "js/libraries/bootstrap.min.js",
+          "js/libraries/mdb.min.js",
+          "js/libraries/insQ.min.js",
+          "js/random-name-generator.js", 
+          "js/popup.js", 
+          "js/background.js", 
+          "js/content.js"
+        ],
+      "css": [
+          "css/teamwork-dark.css"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_title ": "Teamwork Chat Pro",
+    "default_icon": "img/tw-chat.png",
+    "default_popup": "options-v2.html"
+  },
+  "content_security_policy": "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; object-src 'self'",
+  "web_accessible_resources": [
+    "https://www.googletagmanager.com",
+    "https://www.google-analytics.com"
+  ]
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Options | Teamwork Chat</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-46PK89KKLN"></script>
+    <!-- Recursos estaticos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/popup.css" />
+
+
+
+</head>
+<body>
+
+    <div class="row no-gutters">
+        <div class="col-12 navbar navbar-dark elegant-color d-flex justify-content-between align-items-center p-3 w-100 sticky-top">
+            <img src="favicon.png" width="32" height="32"/>
+            <b class="ml-3">Teamwork Chat Pro</b>
+            <button class="btn btn-outline-light btn-sm" type="button" data-toggle="collapse" data-target="#MainNav">
+              Menu
+            </button>
+        </div>
+        <div class="col-12  blue-gradient" style="overflow-y: auto;">
+            <div class="container">
+                <div class="row no-gutters" style="background-color: #00000066;">
+                    <nav class="col-12 col-sm-4 col-lg-2 p-3 collapse" id="MainNav">
+                        <ul class="nav md-pills flex-column">
+                            <li class="nav-item">
+                              <a class="nav-link text-light" href="#tema">Tema</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-light" href="#meet">Boton Meet</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-light" href="#comentarios">Enviar comentarios</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-light" href="#acercade">Acerca de TW Pro</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="col-12 col-sm p-4">
+
+                        <h3 id="tema" class="mb-3 d-flex justify-content-between">
+                            <span>Color</span>
+                            <button class="btn btn-transparent btn-sm" type="button" data-toggle="collapse" data-target="#colorOptions">
+                                <img src="https://img.icons8.com/win10/ffffff/menu-vertical" width="16" height="16"/>
+                            </button>   
+                        </h3>
+                        <div id="colorOptions" class="collapse">                    
+                            <div class="d-flex flex-wrap mb-3 ml-3">
+                                <button class="btn px-3 d-flex text-left align-items-center color-btn" data-color="rgb(29, 28, 57)" id="classicColor">
+                                    <span style="background-color: rgb(29, 28, 57);" class="burbuja mr-3"></span>
+                                    <span>Classic</span>
+                                </button>
+                                <button class="btn px-3 d-flex text-left align-items-center color-btn" data-color="#0066CC" id="blueColor">
+                                    <span style="background-color: #0066CC;" class="burbuja mr-3"></span>
+                                    <span>Blue Moon</span>
+                                </button>
+                                <button class="btn px-3 d-flex text-left align-items-center color-btn" data-color="#FF0000" id="redColor">
+                                    <span style="background-color: #FF0000;" class="burbuja mr-3"></span>
+                                    <span>Red Rose</span>
+                                </button>
+                                <button class="btn px-3 d-flex text-left align-items-center color-btn" data-color="#9933FF" id="purpleColor">
+                                    <span style="background-color: #9933FF;" class="burbuja mr-3"></span>
+                                    <span>Purple Essence</span>
+                                </button>
+                                <button class="btn px-3 d-flex text-left align-items-center color-btn" data-color="#000" id="customColor">
+                                    <span style="background-color: transparent;" class="burbuja mr-3"></span>
+                                    <span>Elegir</span>
+                                </button>
+                            </div>
+                            <h5 class="ml-3">Tema</h5>
+                            <div class="d-flex flex-wrap mb-5 ml-3">
+                                <button class="btn px-3 d-flex text-left align-items-center theme-btn" data-theme="classic" id="classicTheme">
+                                    <span style="background-color: #ddd;" class="burbuja mr-3"></span>
+                                    <span>Light (Classic)</span>
+                                </button>
+                                <button class="btn px-3 d-flex text-left align-items-center theme-btn" data-theme="dark" id="darkTheme">
+                                    <span style="background-color: #333;" class="burbuja mr-3"></span>
+                                    <span>Dark</span>
+                                </button>
+                            </div>
+                        </div> 
+
+                        <h3 id="meet" class="mb-3 d-flex justify-content-between">
+                            <span>Boton Meet</span>
+                            <button class="btn btn-transparent btn-sm" type="button" data-toggle="collapse" data-target="#meetOptions">
+                                <img src="https://img.icons8.com/win10/ffffff/menu-vertical" width="16" height="16"/>
+                            </button>   
+                        </h3>
+                        <div id="meetOptions" class="collapse">
+                            <div class="mb-4 ml-3">
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" class="custom-control-input inputControl" id="meetDesactivado" name="meetButton">
+                                    <label class="custom-control-label" for="meetDesactivado">Desactivado</label>
+                                </div>
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" class="custom-control-input inputControl" id="meetLink" name="meetButton">
+                                    <label class="custom-control-label" for="meetLink">Sólo generar link</label>
+                                </div>       
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" class="custom-control-input inputControl" id="meetLinkSend" name="meetButton">
+                                    <label class="custom-control-label" for="meetLinkSend">Generar y enviar link</label>
+                                </div>                    
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" class="custom-control-input inputControl" id="meetSendOpen" name="meetButton">
+                                    <label class="custom-control-label" for="meetSendOpen">Enviar y abrir link</label>
+                                </div>
+                            </div>
+                            <h5 class="ml-3">Nombre de Meet</h5>
+                            <div class="mb-4 ml-3">
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" class="custom-control-input inputControl" id="linkAleatorio" name="linkName">
+                                    <label class="custom-control-label" for="linkAleatorio">Aleatorio</label>
+                                </div>
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" class="custom-control-input inputControl" id="linkChat" name="linkName">
+                                    <label class="custom-control-label" for="linkChat">Usar nombre del chat, conversacion, o grupo.</label>
+                                </div>       
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" class="custom-control-input inputControl" id="linkPreguntar" name="linkName" checked>
+                                    <label class="custom-control-label" for="linkPreguntar">Preguntar cada vez</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 id="comentarios" class="mb-3 d-flex justify-content-between">
+                            <span>Enviar comentarios</span>
+                            <button class="btn btn-transparent btn-sm" type="button" data-toggle="collapse" data-target="#enviarComentarios">
+                                <img src="https://img.icons8.com/win10/ffffff/menu-vertical" width="16" height="16"/>
+                            </button>   
+                        </h3>
+                        <div id="enviarComentarios" class="collapse">
+                            <p class="mb-4 ml-3">Valoramos tus sugerencias, envianos tus comentarios por este <a href="https://docs.google.com/forms/d/e/1FAIpQLSeS-c5-FUF2oWB69MR5dLdYczVE97hd4eki9lsKt7j2wDR2UQ/viewform" title="Confiadisimo link de una extension">Formulario de Google</a>.</p>
+                        </div>
+
+                        <h3 id="acercade" class="mb-3 d-flex justify-content-between">
+                            <span>Acerca de Teamwork Chat Pro</span>
+                            <button class="btn btn-transparent btn-sm" type="button" data-toggle="collapse" data-target="#creditos">
+                                <img src="https://img.icons8.com/win10/ffffff/menu-vertical" width="16" height="16"/>
+                            </button>   
+                        </h3>
+                        <div id="creditos" class="collapse">
+                            <p class="mb-4 ml-3">Extensión de Google Chrome para Teamwork Chat. Dev: Pablo Facciano.<br>Contacto: pablo.facciano@xappia.com</p>
+                        </div>
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 p-3">
+            Ultima actualización: 01/11/2020
+        </div>
+    </div>
+    
+    
+    <script type="text/javascript" src="js/libraries/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/libraries/popper.min.js"></script>
+    <script type="text/javascript" src="js/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/libraries/mdb.min.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/popup.js"></script>
+</body>
+</html>
+

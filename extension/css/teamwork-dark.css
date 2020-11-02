@@ -1,0 +1,172 @@
+.tw-custom {
+    --dark-1: #111;
+    --dark-2: #222;
+    --dark-28: #282828;
+    --dark-3: #333;
+    --dark-4: #444;
+    --dark-5: #555;
+    --dark-6: #666;
+    --dark-a: #aaa;
+    --dark-d: #ddd;
+    --theme-color: #205e9f;
+}
+
+
+.tw-custom blockquote {
+    border-color: #444 !important;
+}
+
+.meetButton,
+.tw-custom .s-messages__item--selected,
+.tw-custom .s-messages__item--selected *,
+.tw-custom .s-conversations-list__unread-indicator,
+.tw-custom .s-conversation-preview--unread, 
+.tw-custom .s-conversation-preview--unread *:not(.s-avatar__status),
+.tw-custom .s-unified-header { 
+    background-color: var(--theme-color) !important;
+}
+.tw-custom #TwContainer,
+.tw-custom #TwContainer *,
+.tw-custom .s-messages__item,
+.tw-custom .s-messages__item *,
+.tw-custom .s-messages__separator-content,
+.tw-custom .s-messages__separator-content--last-read,
+.tw-custom .s-conversation-title,
+.tw-custom .s-conversation-title *:not(.s-avatar__status),
+.tw-custom .s-conversation__message-form-wrapper,
+.tw-custom .s-conversation__message-form-wrapper *:not(.s-avatar__status),
+.tw-custom .m-file-viewer__file,
+.tw-custom .m-file-viewer__file *:not(.s-avatar__status),
+.tw-custom .s-messages,
+.tw-custom .s-messages *:not(pre):not(code):not(.s-avatar__status) {
+    background-color: var(--dark-28) ;
+}
+
+.tw-custom .p-chat__left-sidebar,
+.tw-custom .s-conversations-list,
+.tw-custom .w-conversation-link,
+.tw-custom .s-conversation-blank-slate__message,
+.tw-custom .w-conversation-link,
+.tw-custom .p-chat__left-sidebar,
+.tw-custom .s-conversations-list,
+.tw-custom .s-starred-conversations-list,
+.tw-custom .s-conversations-filter,
+.tw-custom .s-conversations-filter *:not(.s-avatar__status),
+.tw-custom .s-conversations-list__header,
+.tw-custom .s-conversations-list__header *:not(.s-avatar__status),
+.tw-custom .w-text-input,
+.tw-custom .w-text-input *:not(.s-avatar__status),
+.tw-custom .m-file-viewer__header,
+.tw-custom .m-file-viewer__header *:not(.s-avatar__status),
+.tw-custom  {
+    background-color: var(--dark-2) !important;
+}
+
+.tw-custom .s-conversation-preview.router-link-active, 
+.tw-custom .s-conversation-preview.router-link-active *:not(.s-avatar__status) {
+    background-color: var(--dark-5) !important;
+}
+
+.meetButton,
+.tw-custom .s-card,
+.tw-custom .s-card *:not(.s-avatar__status) {
+    background-color: var(--dark-1) !important;
+    color: var(--dark-d);
+}
+
+.tw-custom .mention-tag {
+    background-color: var(--dark-6) !important;
+}
+
+.tw-custom .s-avatar__status,
+.tw-custom .s-message-reactions,
+.tw-custom .s-reaction-picker,
+.tw-custom .s-reaction,
+.tw-custom .s-conversations-list--blank-slate-shown, 
+.tw-custom .s-conversation-timeline-blank-slate,
+.tw-custom .s-conversations-list {
+    border-width: 0px !important;
+}
+
+.tw-custom,
+.tw-custom .s-messages__separator-line,
+.tw-custom .s-menu__item,
+.tw-custom .s-menu__item *:not(.s-avatar__status),
+.tw-custom .s-third-party-card,
+.tw-custom .s-message-form {
+    border-color: var(--dark-4) !important;
+}
+
+.tw-custom .s-conversation-preview__title-text,
+.tw-custom .s-conversation-preview__top-row,
+.tw-custom .s-conversation-preview__top-row *:not(.s-avatar__status) {
+    color: var(--dark-4) !important;
+}
+
+.tw-custom .ql-editor *:not(.s-avatar__status),
+.tw-custom .s-message__author,
+.tw-custom .s-message__author *:not(.s-avatar__status),
+.tw-custom .m-file-viewer__header,
+.tw-custom .m-file-viewer__header *:not(.s-avatar__status),
+.tw-custom .s-conversation-preview__bottom-row,
+.tw-custom .s-conversation-preview__bottom-row *:not(.s-avatar__status),
+.tw-custom .s-conversation-preview__author-label,
+.tw-custom .s-conversation-preview__author-label *:not(.s-avatar__status) {
+    color: var(--dark-a) !important;
+}
+
+.tw-custom .s-conversation-preview--unread, 
+.tw-custom .p-chat__left-sidebar,
+.tw-custom .p-chat__left-sidebar *:not(.s-avatar__status),
+.tw-custom .s-conversation-title__title-text,
+.tw-custom .s-conversation-title__title-text *:not(.s-avatar__status),
+.tw-custom .s-messages__separator-content,
+.tw-custom .s-messages__separator-content *:not(.s-avatar__status),
+.tw-custom .s-message__contents,
+.tw-custom .s-message__contents *:not(.s-avatar__status) {
+    color: var(--dark-d) !important;
+}
+
+.meetButton,
+.tw-custom .mention-tag {
+    border-radius: 50px;
+}
+/*
+ Revisar esto
+*/
+
+.tw-custom .s-third-party-card__header a:contains('Meet'),
+.tw-custom .s-third-party-card__header a:contains('Meet') *:not(.s-avatar__status) {
+    background-color: var(--theme-color) !important;
+}
+
+.tw-custom .s-message__contents pre 
+.tw-custom .s-message__contents pre *:not(.s-avatar__status) 
+.tw-custom .s-message__contents code 
+.tw-custom .s-message__content code *:not(.s-avatar__status) {
+    background-color: var(--dark-5) !important;
+}
+
+
+
+.meetButton {
+    outline: none;
+    margin: 5px 15px;
+    border: 1px solid var(--theme-color);
+    padding: 4px 6px;
+    cursor: hand;
+    background: var(--theme-color) !important;
+}
+#TwContainer {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+#TwContainer a,
+#TwContainer a * {
+    border: none;
+    outline: none;
+    padding: 2px 2px;
+    cursor: pointer;
+} 
